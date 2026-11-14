@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://b5g73mh3kvm"]
+
+[ext_resource type="FontFile" uid="uid://dhhuqpdbwnjqi" path="res://assets/font/Lobster-Regular.ttf" id="1_grdc7"]
+
+[node name="PauseMenu" type="Control" unique_id=738404271]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2131829102]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=34983166]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.19215687)
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=242094438]
+offset_left = 267.0
+offset_top = 54.0
+offset_right = 882.0
+offset_bottom = 193.0
+theme_override_fonts/font = ExtResource("1_grdc7")
+theme_override_font_sizes/font_size = 80
+text = "Game Paused"
+horizontal_alignment = 1
+
+[node name="Resume" type="Button" parent="CanvasLayer" unique_id=1479365866]
+offset_left = 468.0
+offset_top = 228.0
+offset_right = 688.0
+offset_bottom = 346.0
+text = "Resume"
+
+[node name="Home" type="Button" parent="CanvasLayer" unique_id=563593000]
+offset_left = 303.0
+offset_top = 410.0
+offset_right = 523.0
+offset_bottom = 528.0
+text = "Resume"
+
+[node name="Save" type="Button" parent="CanvasLayer" unique_id=1927511375]
+offset_left = 640.0
+offset_top = 410.0
+offset_right = 860.0
+offset_bottom = 528.0
+text = "Save
+"

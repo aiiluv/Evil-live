@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ckwh35ffi6eb7"]
+
+[ext_resource type="Texture2D" uid="uid://15jvrqcs8ylg" path="res://assets/sprite/Henry.png" id="1_0bj34"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qml6s"]
+radius = 158.39824
+
+[node name="Henry" type="CharacterBody2D" unique_id=1275219891]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=900966793]
+texture = ExtResource("1_0bj34")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1110446200]
+shape = SubResource("CircleShape2D_qml6s")
