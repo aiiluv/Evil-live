@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dp3hbyge2yrl"]
+
+[ext_resource type="Texture2D" uid="uid://bepfvjwufmpbn" path="res://assets/sprite/okasan.png" id="1_c8j6b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4vp73"]
+radius = 166.73631
+
+[node name="Mother" type="CharacterBody2D" unique_id=830212559]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=526777990]
+texture = ExtResource("1_c8j6b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1191498840]
+shape = SubResource("CircleShape2D_4vp73")

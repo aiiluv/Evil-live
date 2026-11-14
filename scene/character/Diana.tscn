@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c2eatqjbjwan6"]
+
+[ext_resource type="Texture2D" uid="uid://djdhl8tu5kfoa" path="res://assets/sprite/Diana.png" id="1_3h87c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wmflg"]
+radius = 138.91724
+
+[node name="Diana" type="CharacterBody2D" unique_id=1589006348]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1610598076]
+texture = ExtResource("1_3h87c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1242393897]
+shape = SubResource("CircleShape2D_wmflg")

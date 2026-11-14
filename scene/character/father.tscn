@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bo6ojwj1tnxfo"]
+
+[ext_resource type="Texture2D" uid="uid://c2auayjbhgq7s" path="res://assets/sprite/ottosan.png" id="1_85ob1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6bsiq"]
+radius = 164.2011
+
+[node name="Father" type="CharacterBody2D" unique_id=1401983897]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=423268482]
+texture = ExtResource("1_85ob1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1917796905]
+shape = SubResource("CircleShape2D_6bsiq")

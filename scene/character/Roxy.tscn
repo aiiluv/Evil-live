@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bakstfe7l88f8"]
+
+[ext_resource type="Texture2D" uid="uid://cmkhhpvbtql8o" path="res://assets/sprite/Roxy.png" id="1_mseog"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b1w3t"]
+radius = 164.3472
+
+[node name="Roxy" type="CharacterBody2D" unique_id=650729785]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1214594606]
+texture = ExtResource("1_mseog")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=736946150]
+shape = SubResource("CircleShape2D_b1w3t")
