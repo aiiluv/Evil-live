@@ -1,3 +1,14 @@
 [gd_scene format=3 uid="uid://diuw5vhyjmvho"]
 
+[ext_resource type="Texture2D" uid="uid://bmxkju1054ncp" path="res://assets/sprite/Bobo.png" id="1_yvj1n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d610t"]
+radius = 146.23953
+
 [node name="Bobo" type="CharacterBody2D" unique_id=1602721877]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=158561211]
+texture = ExtResource("1_yvj1n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=287022500]
+shape = SubResource("CircleShape2D_d610t")

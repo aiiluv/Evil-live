@@ -11,4 +11,4 @@ func _on_mouse_exited() -> void:
 	tween.tween_property(self, "scale", Vector2(0.4, 0.4), 0.2).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
 
 func _on_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scene/INI.tscn")

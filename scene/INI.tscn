@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://dml5jfdtgsq0w"]
+
+[ext_resource type="Texture2D" uid="uid://b6j3h3mspgkhk" path="res://assets/bg/bg (1).png" id="1_0h6ie"]
+[ext_resource type="Texture2D" uid="uid://cplbydpxbhohr" path="res://assets/bg/Group 17.png" id="2_m2l8y"]
+[ext_resource type="Texture2D" uid="uid://b8ovnriemwjyw" path="res://assets/btn/base btn.png" id="3_lmvc4"]
+[ext_resource type="FontFile" uid="uid://dhhuqpdbwnjqi" path="res://assets/font/Lobster-Regular.ttf" id="4_0gqac"]
+[ext_resource type="Script" uid="uid://b70ffi3sxp8i3" path="res://script/comeback.gd" id="4_dcsga"]
+[ext_resource type="Texture2D" uid="uid://dntcy12pu6q8u" path="res://assets/bg/Group 19.png" id="4_eatou"]
+[ext_resource type="Texture2D" uid="uid://2gvif7yy82x4" path="res://assets/sprite/player.png" id="5_eatou"]
+[ext_resource type="Texture2D" uid="uid://c2auayjbhgq7s" path="res://assets/sprite/ottosan.png" id="6_lmvc4"]
+[ext_resource type="Texture2D" uid="uid://bepfvjwufmpbn" path="res://assets/sprite/okasan.png" id="7_avf8s"]
+[ext_resource type="Script" uid="uid://cniqvhks6nivw" path="res://script/playerjump.gd" id="9_0gqac"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0gqac"]
+radius = 75.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_avf8s"]
+size = Vector2(1166, 103)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eatou"]
+size = Vector2(288, 126)
+
+[node name="Ini" type="Node2D" unique_id=443385980]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1006760841]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=460312482]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0h6ie")
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=1723067970]
+offset_left = -212.0
+offset_top = -349.0
+offset_right = 1414.0
+offset_bottom = 890.0
+scale = Vector2(0.8, 0.8)
+icon = ExtResource("2_m2l8y")
+flat = true
+
+[node name="BtnBack" type="Button" parent="CanvasLayer" unique_id=975356782]
+offset_left = 832.0
+offset_top = 25.00003
+offset_right = 2164.0
+offset_bottom = 417.00003
+scale = Vector2(0.2, 0.2)
+icon = ExtResource("3_lmvc4")
+flat = true
+script = ExtResource("4_dcsga")
+
+[node name="Label" type="Label" parent="CanvasLayer/BtnBack" unique_id=114131662]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 79.99985
+offset_right = 991.0
+offset_bottom = 267.99985
+theme_override_fonts/font = ExtResource("4_0gqac")
+theme_override_font_sizes/font_size = 150
+text = "Comeback?"
+
+[node name="playerjump" type="CharacterBody2D" parent="CanvasLayer" unique_id=2017909850]
+position = Vector2(-61, -88)
+script = ExtResource("9_0gqac")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer/playerjump" unique_id=760653317]
+position = Vector2(616, 408)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_eatou")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/playerjump" unique_id=115104524]
+position = Vector2(616, 419)
+shape = SubResource("CircleShape2D_0gqac")
+
+[node name="2" type="StaticBody2D" parent="CanvasLayer" unique_id=769585645]
+position = Vector2(302, 300)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/2" unique_id=1593547526]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_lmvc4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/2" unique_id=1354235849]
+shape = SubResource("CircleShape2D_0gqac")
+
+[node name="3" type="StaticBody2D" parent="CanvasLayer" unique_id=1560976115]
+position = Vector2(988, 262)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/3" unique_id=536838495]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_avf8s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/3" unique_id=1433940671]
+shape = SubResource("CircleShape2D_0gqac")
+
+[node name="Gameover" type="Area2D" parent="CanvasLayer" unique_id=2015770926]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Gameover" unique_id=1335105265]
+position = Vector2(573, 603)
+shape = SubResource("RectangleShape2D_avf8s")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CanvasLayer" unique_id=1555823694]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/StaticBody2D" unique_id=494108336]
+position = Vector2(603, 526)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_eatou")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/StaticBody2D" unique_id=1409422074]
+position = Vector2(583, 514)
+shape = SubResource("RectangleShape2D_eatou")
+
+[connection signal="pressed" from="CanvasLayer/BtnBack" to="CanvasLayer/BtnBack" method="_on_pressed"]
+[connection signal="area_entered" from="CanvasLayer/Gameover" to="CanvasLayer/2" method="_on_gameover_area_entered"]

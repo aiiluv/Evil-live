@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bu1ieu7f5716g"]
+
+[ext_resource type="VideoStream" uid="uid://srpjxgvvpxcb" path="res://assets/video/TOLONGIN FATTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT.ogv" id="1_7hjij"]
+[ext_resource type="Script" uid="uid://b53uiluyqjf2g" path="res://script/skip.gd" id="2_ir2f2"]
+
+[node name="Awalnya" type="Node2D" unique_id=279220580]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1975389710]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer" unique_id=1482554239]
+offset_left = 100.0
+offset_top = 46.0
+offset_right = 2020.0
+offset_bottom = 1126.0
+scale = Vector2(0.5, 0.5)
+stream = ExtResource("1_7hjij")
+autoplay = true
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=763193315]
+offset_left = 799.0
+offset_top = 513.0
+offset_right = 1106.0
+offset_bottom = 611.0
+theme_override_font_sizes/font_size = 40
+text = "Skip"
+script = ExtResource("2_ir2f2")
+
+[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]

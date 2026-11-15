@@ -31,23 +31,15 @@ text = "Game Paused"
 horizontal_alignment = 1
 
 [node name="Resume" type="Button" parent="CanvasLayer" unique_id=1479365866]
-offset_left = 468.0
-offset_top = 228.0
-offset_right = 688.0
-offset_bottom = 346.0
+offset_left = 597.0
+offset_top = 242.0
+offset_right = 817.0
+offset_bottom = 360.0
 text = "Resume"
 
 [node name="Home" type="Button" parent="CanvasLayer" unique_id=563593000]
-offset_left = 303.0
-offset_top = 410.0
-offset_right = 523.0
-offset_bottom = 528.0
-text = "Resume"
-
-[node name="Save" type="Button" parent="CanvasLayer" unique_id=1927511375]
-offset_left = 640.0
-offset_top = 410.0
-offset_right = 860.0
-offset_bottom = 528.0
-text = "Save
-"
+offset_left = 340.0
+offset_top = 239.0
+offset_right = 560.0
+offset_bottom = 357.0
+text = "Home"

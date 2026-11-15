@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cbdbxbj8th85f"]
+
+[ext_resource type="Texture2D" uid="uid://b6j3h3mspgkhk" path="res://assets/bg/bg (1).png" id="1_xdgq8"]
+[ext_resource type="Texture2D" uid="uid://2gvif7yy82x4" path="res://assets/sprite/player.png" id="2_osy0p"]
+
+[node name="End" type="Node2D" unique_id=1562239530]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=414833177]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CanvasLayer" unique_id=1964161717]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CanvasLayer" unique_id=1265810683]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xdgq8")
+
+[node name="Player" type="Sprite2D" parent="CanvasLayer/CanvasLayer/TextureRect" unique_id=2037656187]
+position = Vector2(583, 418)
+texture = ExtResource("2_osy0p")

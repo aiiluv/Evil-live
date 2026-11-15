@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bvalkcflsxd63"]
+
+[ext_resource type="Texture2D" uid="uid://b6j3h3mspgkhk" path="res://assets/bg/bg (1).png" id="1_ea8k2"]
+[ext_resource type="Script" uid="uid://de4b1x0afhcl" path="res://script/backstory.gd" id="1_nnuei"]
+[ext_resource type="Texture2D" uid="uid://2gvif7yy82x4" path="res://assets/sprite/player.png" id="3_v7eyx"]
+[ext_resource type="Texture2D" uid="uid://c2auayjbhgq7s" path="res://assets/sprite/ottosan.png" id="4_im2ov"]
+[ext_resource type="Texture2D" uid="uid://bepfvjwufmpbn" path="res://assets/sprite/okasan.png" id="5_pi4ow"]
+
+[node name="Backstory" type="Node2D" unique_id=1968843120]
+script = ExtResource("1_nnuei")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=913114965]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=490510378]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ea8k2")
+
+[node name="Player" type="Sprite2D" parent="CanvasLayer/TextureRect" unique_id=1132199939]
+position = Vector2(583, 418)
+texture = ExtResource("3_v7eyx")
+
+[node name="Ottosan" type="Sprite2D" parent="CanvasLayer/TextureRect" unique_id=478230777]
+position = Vector2(928, 264)
+texture = ExtResource("4_im2ov")
+
+[node name="Okasan" type="Sprite2D" parent="CanvasLayer/TextureRect" unique_id=6267630]
+position = Vector2(240, 253)
+texture = ExtResource("5_pi4ow")
